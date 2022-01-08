@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane fx:id="view" prefHeight="200.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+   <center>
+      <ListView fx:id="listView" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox alignment="BOTTOM_RIGHT" spacing="5.0">
+         <children>
+            <Button fx:id="anadirButton" mnemonicParsing="false" onAction="#onAnadirButton" text="Button" />
+            <Button fx:id="quitarButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onQuitarButton" text="Button" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</BorderPane>
