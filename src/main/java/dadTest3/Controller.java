@@ -30,7 +30,7 @@ public class Controller implements Initializable {
     private Button anadirButton;
 
     @FXML
-    private ListView<String> nombresList;
+    private ListView<String> listView;
 
     @FXML
     private Button quitarButton;
@@ -39,21 +39,21 @@ public class Controller implements Initializable {
     private BorderPane view;
 
     @FXML
-    void onAnadirAction(ActionEvent event) {
+    void onAnadirButton(ActionEvent event) {
 
     	nombres.add("Jackie Chan");
     	
     }
 
     @FXML
-    void onQuitarAction(ActionEvent event) {
+    void onQuitarButton(ActionEvent event) {
 
     	nombres.remove(seleccionado.get());
     	
     }
     
     public Controller() throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Test1.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Test3.fxml"));
 		loader.setController(this);
 		loader.load();
 	}
@@ -62,10 +62,10 @@ public class Controller implements Initializable {
 		
 		// bindings
 		
-		nombresList.itemsProperty().bind(nombres); // cuando manipulemos el listProperty los cambios
-		// se verán en el listview
+		listView.itemsProperty().bind(nombres); // cuando manipulemos el listProperty los cambios
+		// se verï¿½n en el listview
 		
-		seleccionado.bind(nombresList.getSelectionModel().selectedItemProperty());
+		seleccionado.bind(listView.getSelectionModel().selectedItemProperty());
 
 	}
 	
